@@ -56,21 +56,25 @@ main {
 
 /* line 71, C:/dev/letterheads/v2/style/style.sass */
 .logo {
-  text-align: center; }
-  /* line 73, C:/dev/letterheads/v2/style/style.sass */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  /* line 76, C:/dev/letterheads/v2/style/style.sass */
   .logo .wordmark {
     display: inline-block;
     font-weight: lighter;
     letter-spacing: 0.2em;
     padding: 3px 6px;
     border: solid 1px black; }
-  /* line 79, C:/dev/letterheads/v2/style/style.sass */
+  /* line 82, C:/dev/letterheads/v2/style/style.sass */
   .logo .tagline {
+    letter-spacing: 0.07em;
     display: block;
     font-weight: normal;
     font-size: 18px; }
 
-/* line 85, C:/dev/letterheads/v2/style/style.sass */
+/* line 89, C:/dev/letterheads/v2/style/style.sass */
 .article-wrap {
   -webkit-columns: 4 270px;
   -moz-columns: 4 270px;
@@ -79,16 +83,18 @@ main {
   -moz-column-gap: 2em;
   column-gap: 2em; }
 
-/* line 94, C:/dev/letterheads/v2/style/style.sass */
+/* line 98, C:/dev/letterheads/v2/style/style.sass */
 .colophon {
-  background: lightgray;
+  margin: 25px;
+  padding: 25px;
+  background: rgba(64, 64, 64, 0.5);
   position: relative; }
 
 @media screen and (max-width: 650px) {
-  /* line 103, C:/dev/letterheads/v2/style/style.sass */
+  /* line 108, C:/dev/letterheads/v2/style/style.sass */
   header {
     flex-direction: column; }
-    /* line 105, C:/dev/letterheads/v2/style/style.sass */
+    /* line 110, C:/dev/letterheads/v2/style/style.sass */
     header .logo {
       padding-bottom: 25px; } }
 

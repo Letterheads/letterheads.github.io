@@ -70,6 +70,9 @@ main
 //logo
 .logo
     text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
     .wordmark
         display: inline-block
         font-weight: lighter
@@ -77,6 +80,7 @@ main
         padding: 3px 6px
         border: solid 1px $textcol
     .tagline
+        letter-spacing: 0.07em
         display: block
         font-weight: normal
         font-size: 18px
@@ -92,7 +96,8 @@ main
 
 //colophon !finish
 .colophon
-    background: lightgray
+    +margin-padding
+    background: $linkhov
     position: relative
     
 //grid
