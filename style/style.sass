@@ -1,0 +1,106 @@
+//variables
+$textcol: black
+$linkcol: transparentize($textcol, 0.5)
+$linkhov: lighten($linkcol, 25%)
+
+//viewport widths //not useful for now
+//$xsmall: 330px
+//$small: 500px
+//$medium: 800px
+//$large: 1200px
+
+//mixins
+=clearfix
+    &::after
+        content: ""
+        display: table
+        clear: both
+    
+=margin-padding
+    margin: 25px
+    padding: 25px
+
+//normalization
+address
+    font-style: normal
+    
+//general
+html
+    font-family: "Source Sans Pro", sans-serif
+    font-size: 16px
+    background: none
+    color: $textcol
+
+::selection
+    color: white
+    background: gray
+    
+div
+    display: block
+    
+a
+    text-decoration: none
+    color: $textcol
+    &.link
+        border-bottom: solid 5px $linkcol
+        overflow-wrap: break-word
+        &:hover
+            color: lighten($textcol, 25%)
+            border-bottom-color: $linkhov
+
+//layout
+.wrapper
+    margin: 0
+    padding: 0
+    min-height: 100vh
+    
+header
+    min-height: 25vh
+    +margin-padding
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    flex-wrap: wrap
+    
+main
+    min-height: 75vh
+    +margin-padding
+    border: dashed 1px black
+    
+//logo
+.logo
+    text-align: center
+    .wordmark
+        display: inline-block
+        font-weight: lighter
+        letter-spacing: 0.2em
+        padding: 3px 6px
+        border: solid 1px $textcol
+    .tagline
+        display: block
+        font-weight: normal
+        font-size: 18px
+
+//main columns
+.article-wrap
+    -webkit-columns: 4 270px
+    -moz-columns: 4 270px
+    columns: 2 270px
+    -webkit-column-gap: 2em
+    -moz-column-gap: 2em
+    column-gap: 2em
+
+//colophon !finish
+.colophon
+    background: lightgray
+    position: relative
+    
+//grid
+//no grid implementation for now, playing with columns
+
+//break header at 650px: introduce padding-bottom
+@media screen and (max-width: 650px)
+    header
+        flex-direction: column
+        .logo
+            padding-bottom: 25px

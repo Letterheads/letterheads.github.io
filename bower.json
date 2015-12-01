@@ -1,0 +1,33 @@
+{
+  "name": "letterheads",
+  "authors": [
+    "buiestru <buiestru@gmail.com>"
+  ],
+  "description": "lean, web, editorial, design",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "letterheads",
+    "lean",
+    "editorial",
+    "web",
+    "design",
+    "bucharest",
+    "duo",
+    "dynamic",
+    "lol"
+  ],
+  "license": "MIT",
+  "homepage": "letterheads.github.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "~3.0.3"
+  }
+}
