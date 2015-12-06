@@ -3,16 +3,10 @@ $textcol: black
 $linkcol: transparentize($textcol, 0.5)
 $linkhov: lighten($linkcol, 25%)
 
-//viewport widths //not useful for now
-//$xsmall: 330px
-//$small: 500px
-//$medium: 800px
-//$large: 1200px
-
 //mixins
 =clearfix
     &::after
-        content: ""
+        content: " "
         display: table
         clear: both
     
@@ -50,21 +44,23 @@ a
 
 //layout
 .wrapper
-    margin: 0
-    padding: 0
+    box-sizing: border-box
     min-height: 100vh
+    padding: 25px 0
     
 header
     min-height: 25vh
     +margin-padding
+    margin-top: 0
     display: flex
     flex-direction: row
     justify-content: space-between
     flex-wrap: wrap
     
 main
-    min-height: 75vh
+    min-height: calc(75vh - 180px)
     +margin-padding
+    margin-bottom: 0
     border: dashed 1px black
     
 //logo
